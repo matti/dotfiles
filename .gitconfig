@@ -1,11 +1,11 @@
 [core]
   excludesfile = ~/.gitignore
-  editor = TODO -w
+  editor = atom -w
 [core "whitespace"]
   tabwidth = 2
 [user]
-  name = TODO TODO
-  email = TODO@TODO.TODO
+  name = Matti Paksula
+  email = matti.paksula@iki.fi
 [alias]
   st = status -sb
   ci = commit
