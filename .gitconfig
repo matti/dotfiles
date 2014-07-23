@@ -1,0 +1,67 @@
+[core]
+  excludesfile = ~/.gitignore
+  editor = TODO -w
+[core "whitespace"]
+  tabwidth = 2
+[user]
+  name = TODO TODO
+  email = TODO@TODO.TODO
+[alias]
+  st = status -sb
+  ci = commit
+  co = checkout
+  br = branch
+  lbr = branch -a
+  lbrv = branch -lvvv
+  gren = grep -n
+  lg = log -p
+  staged = diff --cached
+  cached = diff --cached
+  unstaged = diff
+  both = diff HEAD
+  oneline = log --pretty=oneline
+  amend = commit --amend
+  rull = pull --rebase
+  cp = cherry-pick -x
+  ch = cherry -v
+  fetcha = fetch --all
+[color]
+  ui = true
+  branch = auto
+  diff = auto
+  interactive = auto
+  showbranch = auto
+  status = auto
+[diff]
+  mnemonicprefix = true
+  renames = copies
+[grep]
+  lineNumber = true
+[rerere]
+  autoupdate = true
+  enabled = true
+[push]
+  default = tracking
+[rebase]
+  stat = true
+  autosquash = true
+[status]
+  submodulesummary = true
+[interactive]
+  singlekey = true
+[credential]
+  helper = osxkeychain
+[merge]
+  tool = lolmerge # This will be the default merge tool invoked by git mergetool.
+[mergetool]
+  keepBackup = false
+  keepTemporaries = false
+[mergetool "lolmerge"]
+  # I put p4merge and DiffMerge in /Applications/Utilities, but you might have them in /Applications.
+  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge \
+      "$PWD/$BASE" \
+      "$PWD/$REMOTE" \
+      "$PWD/$LOCAL" \
+      "$PWD/$MERGED"
+  keepBackup = false
+  trustExitCode = false
