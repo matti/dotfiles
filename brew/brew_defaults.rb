@@ -8,21 +8,32 @@ def system_verbose(cmd)
 end
 
 def brew_reinstall(package, opts={})
+  opts_with_mode = opts.merge({mode: :reinstall})
+  brew_install(package, opts_with_mode)
+end
+
+def brew_install(package, opts={})
   if package.is_a? Array
     package.each do |p|
-      brew_reinstall p, opts
+      brew_install p, opts
     end
 
     return
   end
 
+  mode = if opts[:mode]
+    opts[:mode].to_s
+  else
+    "install"
+  end
+
   puts "--[ #{package} ]".ljust(80,"-")
-  if opts[:loads]
+  if opts[:loads] && mode == "reinstall"
     launchctl_unload_cmd = "launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.#{package}.plist"
     system_verbose(launchctl_unload_cmd)
   end
 
-  install_cmd = "brew reinstall #{package}"
+  install_cmd = "brew #{mode} #{package}"
   system_verbose(install_cmd)
 
   if opts[:loads]
@@ -36,17 +47,26 @@ def brew_reinstall(package, opts={})
   puts
 end
 
-brew_reinstall "git"
+mode = ARGV[0]
 
-brew_reinstall ["postgresql", "redis"], loads: true
-brew_reinstall "mongodb", loads: true
+if mode == "reinstall"
+  alias :brew :brew_reinstall
+else
+  alias :brew :brew_install
+end
 
-brew_reinstall "imagemagick"
+brew "git"
 
-brew_reinstall ["youtube-dl", "ffmpeg"]
+brew ["postgresql", "redis"], loads: true
+brew "mongodb", loads: true
 
-system_verbose("sudo easy_install pip")
-system_verbose("sudo pip install pycrypto")
-system_verbose("ln -sf /usr/bin/python2.7 /usr/local/bin/python2")
-brew_reinstall "yle-dl"
+brew "imagemagick"
 
+brew ["youtube-dl", "ffmpeg"]
+
+unless mode == "reinstall"
+  system_verbose("sudo easy_install pip")
+  system_verbose("sudo pip install pycrypto")
+  system_verbose("ln -sf /usr/bin/python2.7 /usr/local/bin/python2")
+end
+brew "yle-dl"
