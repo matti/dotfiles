@@ -70,3 +70,5 @@ unless mode == "reinstall"
   system_verbose("ln -sf /usr/bin/python2.7 /usr/local/bin/python2")
 end
 brew "yle-dl"
+
+brew "homebrew/dupes/rsync"
