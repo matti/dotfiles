@@ -72,3 +72,6 @@ end
 brew "yle-dl"
 
 brew "homebrew/dupes/rsync"
+
+brew "wget"
+
