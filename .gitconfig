@@ -56,9 +56,8 @@
 [mergetool]
   keepBackup = false
   keepTemporaries = false
-[mergetool "lolmerge"]
-  # I put p4merge and DiffMerge in /Applications/Utilities, but you might have them in /Applications.
-  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge \
+[mergetool "lolmerge"]  # TODO: https://gist.github.com/henrik242/1510148
+  cmd = $HOME/Applications/p4merge.app/Contents/Resources/launchp4merge \
       "$PWD/$BASE" \
       "$PWD/$REMOTE" \
       "$PWD/$LOCAL" \

@@ -47,6 +47,9 @@ def brew_install(package, opts={})
   puts
 end
 
+doctor_says_ok = system("brew doctor")
+raise "doctor is not happy" unless doctor_says_ok
+
 mode = ARGV[0]
 
 if mode == "reinstall"
@@ -74,4 +77,4 @@ brew "yle-dl"
 brew "homebrew/dupes/rsync"
 
 brew "wget"
-
+brew "heroku-toolbelt"
