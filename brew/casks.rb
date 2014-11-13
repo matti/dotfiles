@@ -5,7 +5,8 @@ packages = [
   "google-chrome",
   "alfred",
   "vlc",
-  "flowdock"
+  "flowdock",
+  "sourcetree"
 ]
 
 for package in packages do
