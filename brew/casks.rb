@@ -6,7 +6,10 @@ packages = [
   "alfred",
   "vlc",
   "flowdock",
-  "sourcetree"
+  "sourcetree",
+  "skype",
+  "genymotion",
+  "virtualbox"
 ]
 
 for package in packages do
