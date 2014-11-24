@@ -9,7 +9,9 @@ packages = [
   "sourcetree",
   "skype",
   "genymotion",
-  "virtualbox"
+  "virtualbox",
+  "atom",
+  "disk-inventory-x"
 ]
 
 for package in packages do
