@@ -91,3 +91,6 @@ export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 
 export ANDROID_HOME=$HOME/android-sdk-macosx
 export PATH=$ANDROID_HOME/tools:$PATH
+
+export GENYMOTION_APP=/opt/homebrew-cask/Caskroom/genymotion/2.3.0/Genymotion.app
+export GENYMOTION_SHELL=/opt/homebrew-cask/Caskroom/genymotion/2.3.0/Genymotion\ Shell.app
