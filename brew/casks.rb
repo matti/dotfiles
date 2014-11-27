@@ -11,7 +11,8 @@ packages = [
   "genymotion",
   "virtualbox",
   "atom",
-  "disk-inventory-x"
+  "disk-inventory-x",
+  "spotify"
 ]
 
 for package in packages do
