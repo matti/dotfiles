@@ -14,7 +14,8 @@ packages = [
   "disk-inventory-x",
   "spotify",
   "cinch",
-  "caffeine"
+  "caffeine",
+  "acorn"
 ]
 
 for package in packages do
