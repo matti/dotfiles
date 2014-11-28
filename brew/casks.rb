@@ -12,7 +12,9 @@ packages = [
   "virtualbox",
   "atom",
   "disk-inventory-x",
-  "spotify"
+  "spotify",
+  "cinch",
+  "caffeine"
 ]
 
 for package in packages do
