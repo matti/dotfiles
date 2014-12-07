@@ -78,3 +78,8 @@ brew "homebrew/dupes/rsync"
 
 brew "wget"
 brew "heroku-toolbelt"
+
+brew "htop-osx"
+echo "Setting suid for htop"
+sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop
+sudo chmod u+s /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop
