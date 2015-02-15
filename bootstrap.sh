@@ -12,3 +12,10 @@ echo "Generating a new key, remember to set a passphrase"
 ssh-keygen
 
 cat .ssh/id_rsa.pub
+
+echo "set key to github and hit enter"
+read
+
+mkdir -p $HOME/dev
+cd $HOME/dev
+git clone git@github.com:matti/dotfiles

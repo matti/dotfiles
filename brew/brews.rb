@@ -58,6 +58,8 @@ else
   alias :brew :brew_install
 end
 
+system_verbose "sudo -v"
+
 brew "git"
 
 brew ["postgresql", "redis"], loads: true
@@ -83,5 +85,5 @@ brew "heroku-toolbelt"
 
 brew "htop-osx"
 puts "Setting suid for htop"
-system_verbose "sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop"
-system_verbose "sudo chmod u+s /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop"
+system_verbose "sudo chown root:wheel /usr/local/bin/htop"
+system_verbose "sudo chmod u+s /usr/local/bin/htop"

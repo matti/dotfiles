@@ -15,7 +15,6 @@ packages = [
   "spotify",
   "cinch",
   "caffeine",
-  "acorn",
   "evernote",
   "carbon-copy-cloner"
 ]

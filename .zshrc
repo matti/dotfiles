@@ -94,3 +94,8 @@ export PATH=$ANDROID_HOME/tools:$PATH
 
 export GENYMOTION_APP=/opt/homebrew-cask/Caskroom/genymotion/2.3.0/Genymotion.app
 export GENYMOTION_SHELL=/opt/homebrew-cask/Caskroom/genymotion/2.3.0/Genymotion\ Shell.app
+
+export LANGUAGE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
