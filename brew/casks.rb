@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 
 packages = [
+  "texpad",
+  "skitch",
+  "telegram",
   "p4merge",
   "google-chrome",
   "alfred",
