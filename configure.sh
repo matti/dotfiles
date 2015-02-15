@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-source default.sh
-
 open "$HOME/Applications/Alfred 2.app"
 echo "register"
 echo "clipboard viewer hotkey, persist"
@@ -21,6 +19,13 @@ open "/System/Library/PreferencePanes/Dock.prefPane/"
 echo "set sizes"
 echo "double-click a window's title bar to minimize"
 hitEnter
+
+open "/System/Library/PreferencePanes/Sound.prefPane/"
+echo "disable user interface sounds"
+echo "set alert volume to minimum"
+echo "enable show volume in menubar"
+hitEnter
+
 
 open "/System/Library/PreferencePanes/Displays.prefPane/"
 echo "more space"
@@ -62,6 +67,9 @@ hitEnter
 open "$HOME/Applications/Texpad.app"
 echo "register"
 echo "auto typeset"
+hitEnter
+
+open "$HOME/Applications/Mendeley Desktop.app"
 hitEnter
 
 open ~/Applications/Evernote.app
