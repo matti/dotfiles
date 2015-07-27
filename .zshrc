@@ -30,8 +30,6 @@ export LC_ALL="en_US.UTF-8"
 
 export ATOM_PATH=/usr/local/bin/atom
 
-#[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
-
 export GOPATH=$HOME/.go
 export PATH=$HOME/.go/bin/:$PATH
 
@@ -39,3 +37,5 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 rvm use 2.2.2@global
+
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
