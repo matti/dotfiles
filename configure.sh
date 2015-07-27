@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ./default.sh
+
 open "$HOME/Applications/Alfred 2.app"
 echo "register"
 echo "clipboard viewer hotkey, persist"
