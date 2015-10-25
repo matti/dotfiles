@@ -1,6 +1,8 @@
 [core]
 	excludesfile = /Users/mpa/.gitignore_global
   editor = atom -w
+[push]
+  default = simple
 [core "whitespace"]
   tabwidth = 2
 [user]
