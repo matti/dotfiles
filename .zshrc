@@ -28,8 +28,6 @@ export LANGUAGE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-export ATOM_PATH=/usr/local/bin/atom
-
 export GOPATH=$HOME/.go
 export PATH=$HOME/.go/bin/:$PATH
 
