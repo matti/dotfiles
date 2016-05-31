@@ -83,6 +83,7 @@ brew "homebrew/dupes/rsync"
 
 brew "wget"
 brew "heroku-toolbelt"
+brew "gpg"
 
 brew "htop-osx"
 puts "Setting suid for htop"
