@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 packages = [
-  "texpad",
   "skitch",
   "telegram",
   "p4merge",
@@ -11,7 +10,6 @@ packages = [
   "flowdock",
   "sourcetree",
   "skype",
-  "genymotion",
   "virtualbox",
   "atom",
   "disk-inventory-x",
