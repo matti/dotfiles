@@ -34,5 +34,13 @@ defaults write com.apple.Safari NSUserKeyEquivalents -dict
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
 
+defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+defaults write -g "com.apple.sound.beep.feedback" -int 0
+defaults write "com.apple.systemsound" "com.apple.sound.uiaudio.enabled" -int 0
+killall -HUP SystemUIServer
+
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 CFPreferencesAppSynchronize "com.apple.Safari"
