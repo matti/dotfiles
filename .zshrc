@@ -14,7 +14,7 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use 0.12
+(nvm use 4.4.5 >/dev/null &)
 
 export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
 
@@ -36,6 +36,6 @@ export PATH=$HOME/.go/bin/:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-rvm use 2.2.2@global
+(rvm use 2.3.0@global >/dev/null &)
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
