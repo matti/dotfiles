@@ -43,4 +43,14 @@ killall -HUP SystemUIServer
 
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
+sudo defaults write /Library/Preferences/com.apple.screensaver loginWindowModulePath "/System/Library/Screen Savers/FloatingMessage.saver"
+
+#TODO: didn't work on new machine...
+defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 27 '{ enabled = 1; value = { parameters = (167,10,1048576); type = standard; }; }'
+
+sudo systemsetup -setsleep Never
+sudo systemsetup -setcomputersleep Never
+sudo systemsetup -setdisplaysleep Never
+sudo systemsetup -setremotelogin on
+
 CFPreferencesAppSynchronize "com.apple.Safari"

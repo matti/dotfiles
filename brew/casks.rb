@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 packages = [
+  "flux",
+  "1password",
   "skitch",
   "telegram",
   "p4merge",

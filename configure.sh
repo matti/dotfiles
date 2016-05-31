@@ -87,6 +87,9 @@ echo "sync: 5min"
 
 hitEnter
 
+open /Applications/Wunderlist.app
+hitEnter
+
 open ~/Applications/Telegram.app
 hitEnter
 

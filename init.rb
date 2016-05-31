@@ -3,10 +3,11 @@
 files=[
 ".gitconfig",
 ".nanorc",
-".zshrc"
+".zshrc",
+"bin"
 ]
 
-puts "install oh-my-zsh, nvm, rvm, brew + brew cask packages, scm breeze before running this"
+puts "install xcode, oh-my-zsh, nvm, rvm, brew + brew cask packages, scm breeze before running this"
 gets
 
 for file in files do
