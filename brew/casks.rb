@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 packages = [
+  "tunnelblick",
   "flux",
   "1password",
   "skitch",
