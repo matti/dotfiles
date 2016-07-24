@@ -1,3 +1,6 @@
+brew 'watch'
+brew 'htop'
+
 cask 'google-chrome'
 
 cask 'atom'
