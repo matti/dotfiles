@@ -47,7 +47,24 @@ hitEnter
 open "/Applications/Skype.app"
 hitEnter
 
+hitEnter
+open "/Applications/Telegram.app"
+echo "- General"
+echo "  - Advanced"
+echo "    - Auto download"
+echo "    - [ ] sound effects"
+echo "- Notifications"
+echo "  - Off"
+echo "- Privacy"
+echo "  - Passcode"
+echo "  - autolock 5min"
+hitEnter
+
 ## checkpoint
+
+
+open "/Applications/Docker.app"
+echo "- TODO"
 
 open "https://facebook.com"
 hitEnter

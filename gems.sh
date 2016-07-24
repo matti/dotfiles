@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-gem install ryby-cli
+gem install bundler

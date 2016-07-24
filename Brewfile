@@ -4,6 +4,7 @@ cask 'atom'
 cask 'p4merge'
 cask 'sourcetree'
 cask 'virtualbox'
+cask 'docker'
 
 cask 'tunnelblick'
 
