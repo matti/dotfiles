@@ -1,5 +1,8 @@
 brew 'watch'
 brew 'htop'
+brew 'gh'
+brew 'duti'
+brew 'dockutil'
 
 cask 'google-chrome'
 
