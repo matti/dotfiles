@@ -37,3 +37,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 (rvm use 2.3.0@global >/dev/null &)
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+
+if [ "$HOST" == "star.local" ]; then
+  docker-machine start &> /dev/null
+  eval $(docker-machine env default)
+fi
