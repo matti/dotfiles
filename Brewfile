@@ -1,3 +1,5 @@
+brew 'gpg'
+
 brew 'watch'
 brew 'htop'
 brew 'gh'

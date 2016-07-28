@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'kommando'
 
 applications = ["Telegram", "Google Chrome", "VLC", "Spotify"]
