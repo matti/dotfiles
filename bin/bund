@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+set -e
+
+echo "updating bundler in gemset global"
+
+rvm gemset use global
+
+gem install bundler
+
