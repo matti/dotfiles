@@ -22,15 +22,21 @@ defaults write com.apple.screensaver askForPasswordDelay -int 1
 defaults write com.apple.dock "wvous-bl-corner" -int 5
 defaults write com.apple.dock "wvous-bl-modifier" -int 0
 
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+#TODO: default?
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+#TODO: not avail anymore?
+##defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 
 defaults write com.apple.finder ShowStatusBar -bool true
+# open finder windows in home folder
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
+#TODO: did this get set?
 defaults write com.apple.Safari ShowStatusBar -bool true
 
+# alt+cmd+left/right nav
 defaults write com.apple.Safari NSUserKeyEquivalents -dict
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
@@ -47,7 +53,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.
 sudo defaults write /Library/Preferences/com.apple.screensaver loginWindowModulePath "/System/Library/Screen Savers/FloatingMessage.saver"
 
 #TODO: didn't work on new machine...
-defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 27 '{ enabled = 1; value = { parameters = (167,10,1048576); type = standard; }; }'
+#defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 27 '{ enabled = 1; value = { parameters = (167,10,1048576); type = standard; }; }'
 
 sudo systemsetup -setsleep Never
 sudo systemsetup -setcomputersleep Never

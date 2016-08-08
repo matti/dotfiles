@@ -20,12 +20,13 @@ brew doctor
 
 echo "brew cask"
 brew install caskroom/cask/brew-cask
+brew cask doctor
 
 echo "rvm"
 curl -sSL https://get.rvm.io | bash -s stable
 
 echo "nvm"
-curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 echo "scm_breeze"
 git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
