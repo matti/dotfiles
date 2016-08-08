@@ -8,6 +8,9 @@ sudo scutil --set HostName $NEWNAME
 sudo scutil --set LocalHostName $NEWNAME
 sudo scutil --set ComputerName $NEWNAME
 
+open /System/Library/PreferencePanes/iCloudPref.prefPane
+echo "Login to iCloud"
+
 echo "Generating a new key, remember to set a passphrase"
 ssh-keygen
 
