@@ -9,18 +9,22 @@ sudo scutil --set LocalHostName $NEWNAME
 sudo scutil --set ComputerName $NEWNAME
 
 open /System/Library/PreferencePanes/iCloudPref.prefPane
-echo "Login to iCloud"
+echo "Login to iCloud and hit enter"
+read
+
+echo "Generating a new key, remember to set a passphrase"
+ssh-keygen
+cat ~/.ssh/id_rsa.pub | tee pbcopy
+echo "set key to github and hit enter"
+read
 
 echo "Install XCode"
 git
 
-echo "Generating a new key, remember to set a passphrase"
-ssh-keygen
-
-cat ~/.ssh/id_rsa.pub | tee pbcopy
-
-echo "set key to github and hit enter"
-read
+until [ $(xcode-select -p 2>/dev/null) ]; do
+  echo "$(date) Waiting XCode install to finish..";
+  sleep 5
+done
 
 mkdir -p $HOME/dev
 cd $HOME/dev
