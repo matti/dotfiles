@@ -26,6 +26,8 @@ until [ $(xcode-select -p 2>/dev/null) ]; do
   sleep 5
 done
 
+sudo xcodebuild -license
+
 mkdir -p $HOME/dev
 cd $HOME/dev
 git clone git@github.com:matti/dotfiles
