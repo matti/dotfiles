@@ -17,7 +17,7 @@ git
 echo "Generating a new key, remember to set a passphrase"
 ssh-keygen
 
-cat .ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub | tee pbcopy
 
 echo "set key to github and hit enter"
 read
