@@ -6,9 +6,10 @@ from Foundation import CFPreferencesAppSynchronize
 CFPreferencesAppSynchronize('$1')
 END
 }
+sudo -v
 
+# not enabled by default (anymore?)
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-defaults write NSGlobalDomain KeyRepeat -int 0
 
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
