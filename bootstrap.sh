@@ -11,6 +11,9 @@ sudo scutil --set ComputerName $NEWNAME
 open /System/Library/PreferencePanes/iCloudPref.prefPane
 echo "Login to iCloud"
 
+echo "Install XCode"
+git
+
 echo "Generating a new key, remember to set a passphrase"
 ssh-keygen
 
