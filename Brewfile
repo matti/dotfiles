@@ -1,3 +1,5 @@
+cask 'launchrocket'
+
 brew 'gpg'
 
 brew 'watch'
