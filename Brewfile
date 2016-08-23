@@ -1,3 +1,6 @@
+cask 'slack'
+
+brew 'heroku'
 cask '1password'
 brew 'mackup'
 
