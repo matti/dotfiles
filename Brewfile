@@ -1,3 +1,6 @@
+cask '1password'
+brew 'mackup'
+
 cask 'launchrocket'
 
 brew 'gpg'
