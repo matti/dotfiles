@@ -2,7 +2,7 @@
 
 require 'kommando'
 
-applications = ["Telegram", "Google Chrome", "VLC", "Spotify"]
+applications = ["Telegram", "Google Chrome", "VLC", "Spotify", "Slack"]
 
 applications.each do |a|
   dockutil_add_cmd = "$ dockutil --add '/Applications/#{a}.app' --replacing '#{a}' --no-restart"
