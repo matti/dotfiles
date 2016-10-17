@@ -8,6 +8,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/matti/dotfiles/master/boot
 
 ```
 ./install.sh
+./init.rb
 ```
 
 ## TODO:
