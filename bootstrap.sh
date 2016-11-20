@@ -31,6 +31,3 @@ sudo xcodebuild -license
 mkdir -p $HOME/dev
 cd $HOME/dev
 git clone git@github.com:matti/dotfiles
-
-echo "Turn filevault on"
-open /System/Library/PreferencePanes/Security.prefPane

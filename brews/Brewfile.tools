@@ -1,0 +1,15 @@
+brew 'gpg'
+brew 'heroku'
+brew 'watch'
+brew 'htop'
+brew 'gh'
+brew 'duti'
+brew 'dockutil'
+
+cask 'virtualbox'
+
+if ENV['HOSTNAME'].include? ["star.local","falcon.local"]
+  cask 'docker-toolbox'
+else
+  cask 'docker'
+end

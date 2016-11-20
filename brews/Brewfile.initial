@@ -1,0 +1,5 @@
+cask 'dropbox'
+brew 'mackup'
+cask 'atom'
+cask '1password'
+cask 'google-chrome'

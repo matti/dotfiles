@@ -4,13 +4,14 @@ dotfiles
 ## new machine install:
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/matti/dotfiles/master/bootstrap.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/matti/dotfiles/master/configure_osx.sh)"
 ```
 
 ```
-./install.sh
-./init.rb
+./oh-my-zsh.sh
+./homebrew.sh
 ```
 
-## TODO:
-
- - set X as default browser
+```
+brew bundle -v --file=brews/Brewfile.initial
+```
