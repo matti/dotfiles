@@ -34,7 +34,8 @@ export PATH=$HOME/.go/bin/:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-(rvm use 2.3.0@global >/dev/null &)
+
+(rvm use 2.3.2@global >/dev/null &)
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
