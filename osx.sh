@@ -8,12 +8,13 @@ END
 }
 sudo -v
 
-# not enabled by default (anymore?)
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+#TODO: defaulttina pois textedit ym?
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 1
@@ -22,9 +23,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 1
 defaults write com.apple.dock "wvous-bl-corner" -int 5
 defaults write com.apple.dock "wvous-bl-modifier" -int 0
 
-#TODO: default?
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+#TODO: start screensaver after n mins?
 
+#TODO: koita läppärillä
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
 #defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 #TODO: not avail anymore?
 ##defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
@@ -33,20 +35,24 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # open finder windows in home folder
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
-#TODO: did this get set?
+
+## Safari
+
+# It's the new "sometimes present statusbar"
 defaults write com.apple.Safari ShowStatusBar -bool true
 
-# alt+cmd+left/right nav
+# Safari alt+cmd+left/right nav
 defaults write com.apple.Safari NSUserKeyEquivalents -dict
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
 
-defaults write NSGlobalDomain KeyRepeat -int 0
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+CFPreferencesAppSynchronize "com.apple.Safari"
 
-defaults write -g "com.apple.sound.beep.feedback" -int 0
-defaults write "com.apple.systemsound" "com.apple.sound.uiaudio.enabled" -int 0
-killall -HUP SystemUIServer
+
+#TODO: does not work in sierra?
+# defaults write -g "com.apple.sound.beep.feedback" -int 0
+# defaults write "com.apple.systemsound" "com.apple.sound.uiaudio.enabled" -int 0
+# killall -HUP SystemUIServer
 
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
@@ -57,7 +63,9 @@ sudo defaults write /Library/Preferences/com.apple.screensaver loginWindowModule
 
 sudo systemsetup -setsleep Never
 sudo systemsetup -setcomputersleep Never
-sudo systemsetup -setdisplaysleep Never
+sudo systemsetup -setdisplaysleep 180
 sudo systemsetup -setremotelogin on
-
-CFPreferencesAppSynchronize "com.apple.Safari"
+sudo systemsetup -setharddisksleep 30
+sudo systemsetup -setrestartpowerfailure on
+sudo systemsetup -setrestartfreeze on
+sudo systemsetup -setallowpowerbuttontosleepcomputer on
