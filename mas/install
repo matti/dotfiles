@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require 'kommando'
+
+accounts_and_apps = {
+  "applefi@mattipaksula.com": {
+    "2do": "https://itunes.apple.com/fi/app/2do/id477670270?mt=12",
+    "keynote": "https://itunes.apple.com/fi/app/keynote/id409183694?mt=12",
+    "wunderlist": "https://itunes.apple.com/fi/app/wunderlist-to-do-list-tasks/id410628904?mt=12",
+    "twitter": "https://itunes.apple.com/fi/app/twitter/id409789998?mt=12",
+    "cinch": "https://itunes.apple.com/fi/app/cinch/id412529613?mt=12"
+  },
+  "appleus@mattipaksula.com": {
+    "airmail": "https://itunes.apple.com/us/app/airmail-3/id918858936?mt=12"
+  }
+}
+
+Kommando.when :error do |k|
+  puts "failed with #{k.code} and out:"
+  puts k.out
+  exit 1
+end
+
+accounts_and_apps.each_key do |account|
+  Kommando.puts "mas signout"
+
+  puts "signin #{account}"
+  sign_in_k = Kommando.new "mas signin #{account}", {
+    output: true
+  }
+  sign_in_k.run_async
+  sign_in_k.in.write gets
+  sign_in_k.wait
+
+  installs = []
+  accounts_and_apps[account].each_pair do |name,url|
+    id = (url.match /id(\d+)?/)[1]
+    installs << Kommando.new("mas install #{id}", {
+      output: true
+    })
+  end
+
+  installs.each do |k|
+    k.run_async
+  end
+
+  installs.map(&:wait)
+end
