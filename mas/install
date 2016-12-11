@@ -1,17 +1,19 @@
 #!/usr/bin/env ruby
 
 require 'kommando'
+require 'io/console'
 
 accounts_and_apps = {
+  "appleus@mattipaksula.com": {
+    "airmail": "https://itunes.apple.com/us/app/airmail-3/id918858936?mt=12"
+  },
   "applefi@mattipaksula.com": {
     "2do": "https://itunes.apple.com/fi/app/2do/id477670270?mt=12",
     "keynote": "https://itunes.apple.com/fi/app/keynote/id409183694?mt=12",
     "wunderlist": "https://itunes.apple.com/fi/app/wunderlist-to-do-list-tasks/id410628904?mt=12",
     "twitter": "https://itunes.apple.com/fi/app/twitter/id409789998?mt=12",
-    "cinch": "https://itunes.apple.com/fi/app/cinch/id412529613?mt=12"
-  },
-  "appleus@mattipaksula.com": {
-    "airmail": "https://itunes.apple.com/us/app/airmail-3/id918858936?mt=12"
+    "cinch": "https://itunes.apple.com/fi/app/cinch/id412529613?mt=12",
+    "bear": "https://itunes.apple.com/fi/app/bear-beautiful-writing-app/id1091189122?mt=12"
   }
 }
 
@@ -29,7 +31,7 @@ accounts_and_apps.each_key do |account|
     output: true
   }
   sign_in_k.run_async
-  sign_in_k.in.write gets
+  sign_in_k.in.write STDIN.noecho(&:gets)
   sign_in_k.wait
 
   installs = []
